@@ -12,10 +12,10 @@ $(document).ready(function () {
         var birthday;
 
         var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-        var firstDate = new Date(2008,01,12);
+        var today = new Date();
         var secondDate = new Date(2008,01,22);
 
-        var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+        var diffDays = Math.round(Math.abs((today.getTime() - secondDate.getTime())/(oneDay)));
     }
 
     $("#getDays").click(getDays);
