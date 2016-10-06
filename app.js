@@ -29,8 +29,9 @@ $(document).ready(function () {
         var birthday = new Date(year, month, day);
 
         var output = Math.round(Math.abs((today.getTime() - birthday.getTime()) / (oneDay)));
-        console.log(output);
 
+        console.log(output);
+        $("#output").append("<h3>There are " + output + " days left until your birthday!</h3>");
     }
 
     $("#getDays").click(getDays);
