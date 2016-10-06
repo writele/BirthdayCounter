@@ -4,8 +4,8 @@
 
 $(document).ready(function () {
     function getDays() {
-        var month = $("#month");
-        var day = $("#day");
+        var month = $("#month").val();
+        var day = $("#day").val();
 
         console.log(month);
         console.log(day);
