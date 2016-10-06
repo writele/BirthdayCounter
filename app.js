@@ -9,16 +9,14 @@ $(document).ready(function () {
         var month = $("#month").val() - 1;
         var day = $("#day").val();
 
-        // Get difference in days between future birthday date and today
-        var today;
-        var birthday;
+        if (month > 11 || month < 0 || day < 0 || day > 31) {
+            return;
+        }
 
         var today = new Date();
-        /// Problem: year should be next year if the month entered has already happened
+        today.setHours(0, 0, 0, 0)
 
-        // if month hasn't happened
-        // if birthday month >= current month
-        if (month >= today.getMonth()) {
+        if (month >= today.getMonth() && day >= today.getDay()) {
             var year = new Date().getFullYear();
         }
         else {
@@ -31,6 +29,9 @@ $(document).ready(function () {
         var output = Math.round(Math.abs((today.getTime() - birthday.getTime()) / (oneDay)));
 
         console.log(output);
+        console.log(birthday);
+        console.log(today);
+        $("#output").empty();
         $("#output").append("<h3>There are " + output + " days left until your birthday!</h3>");
     }
 
