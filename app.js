@@ -10,12 +10,15 @@ $(document).ready(function () {
         // Get difference in days between future birthday date and today
         var today;
         var birthday;
+        var year = new Date().getFullYear();
 
         var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
         var today = new Date();
-        var secondDate = new Date(2008,01,22);
+        var birthday = new Date(year,month,day);
 
-        var diffDays = Math.round(Math.abs((today.getTime() - secondDate.getTime())/(oneDay)));
+        console.log("Today is " + today);
+        console.log("Birthday entered is " + birthday);
+        var diffDays = Math.round(Math.abs((today.getTime() - birthday.getTime())/(oneDay)));
     }
 
     $("#getDays").click(getDays);
