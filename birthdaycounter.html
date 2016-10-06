@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Birthday Counter</title>
 	<meta charset="utf-8" />
     <link href="bootstrap.css" rel="stylesheet" />
 </head>
@@ -11,7 +11,14 @@
             <div class="col-md-10 col-md-offset-1">
                 <h2>How many days until your birthday?</h2>
                 <p>Enter your birthday below.</p>
+                Month: <input type="number" id="month" />
+                <br /><br />
+                Day: <input type="number" id="day" />
+                <br /><br />
+                <button class="btn btn-success" id="getDays">Calculate</button>
+                <div class="output">
 
+                </div>
             </div>
         </div>
 
@@ -19,7 +26,8 @@
     </div>
 
 
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
