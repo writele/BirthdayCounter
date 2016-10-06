@@ -12,17 +12,25 @@ $(document).ready(function () {
         // Get difference in days between future birthday date and today
         var today;
         var birthday;
-        var year = new Date().getFullYear();
+
+        var today = new Date();
+        /// Problem: year should be next year if the month entered has already happened
+
+        // if month hasn't happened
+        // if birthday month >= current month
+        if (month >= today.getMonth()) {
+            var year = new Date().getFullYear();
+        }
+        else {
+            var year = new Date().getFullYear() + 1;
+        }
 
         var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-        var today = new Date();
-        var birthday = new Date(year,month,day);
+        var birthday = new Date(year, month, day);
 
-        console.log("Today is " + today);
-        console.log("Birthday entered is " + birthday);
         var output = Math.round(Math.abs((today.getTime() - birthday.getTime()) / (oneDay)));
-
         console.log(output);
+
     }
 
     $("#getDays").click(getDays);
