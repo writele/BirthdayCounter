@@ -15,16 +15,14 @@ $(document).ready(function () {
 
         var today = new Date();
         today.setHours(0, 0, 0, 0)
-
-        if (month >= today.getMonth() && day >= today.getDay()) {
-            var year = new Date().getFullYear();
-        }
-        else {
-            var year = new Date().getFullYear() + 1;
-        }
+        var year = today.getFullYear();
 
         var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
         var birthday = new Date(year, month, day);
+
+        if (birthday < today) {
+            birthday = new Date(year + 1, month, day);
+        }
 
         var output = Math.round(Math.abs((today.getTime() - birthday.getTime()) / (oneDay)));
 

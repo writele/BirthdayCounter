@@ -1,0 +1,45 @@
+- In your PreCoursework, you've been going over the basics of HTML, CSS, and Javascript. You may be wondering how you can put all of these pieces together to build a functioning website. In this video, we're going to combine CSS, HTML, and Javascript to build a count-down application. The user will be able to enter the month and day of their birthday, and our program will tell them how many days are left until their birthday.
+
+< show finished product >
+
+- Code zip will be in description?
+
+- Let's get start. Open up Visual Studio and start a new website. For any website, we're going to need a HTML file. We'll need to add references to our Javascript and CSS files. To make things look a little nicer, we're going to use Bootstrap. We'll also use jQuery so we'll need to download and reference to both of these files.
+
+< getbootstrap.com >
+
+< jquery.com > 
+
+- First we'll reference both these files.
+
+- We're using jquery because it makes it easier to do things like grab and add things to the DOM
+
+- For our custom js, we'll create a new file called app.js (and reference that)
+
+- For any Javascript program like this, we're going to need to do 3 steps:
+1. get user input
+2. do something with that input
+3. attach the input to the HTML page
+
+- Create HTML inputs for day and month
+- Grab those HTML inputs with jQuery
+- attach event to HTML button
+- Console.log to confirm inputs
+- declare variable to hold onto output
+- we'll need to compare today's date to the birthday entered
+Set today and birthday variables
+console.log to confirm
+- How do we compare these two days? Let's google "get difference between dates javascript"
+console.log the output and test different cases:
+- birthday 3 days after today
+- birthday 35 days after today
+- birthday 3 days before today
+- birthday 35 days before today
+
+- Limit input of month and day 
+
+
+
+
+
+
